@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>幸运大转盘</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/common/mui.min.css" rel="stylesheet">
+    <link href="../css/common/swiper.min.css" rel="stylesheet">
+    <link href="../css/wheel/index.css" rel="stylesheet">
+    <script src="../js/common/jquery.min.js"></script>
+    <script src="../js/common/mui.min.js"></script>
+    <script src="../js/common/swiper.min.js"></script>
+    <script src="../js/common/route.js"></script>
+    <script src="../js/common/base.js"></script>
+    <script src="../js/wheel/index.js"></script>
+</head>
+<body>
+    <div class="mui-content">
+        <div class="swiper-box">
+            <div class="swiper-box-left">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper"></div>
+                </div>
+            </div>
+            <div class="swiper-box-right">
+                <div class="log-button" id="go-record">中奖记录</div>
+            </div>
+        </div>
+
+        <div class="title-icon">
+            <img src="../images/wheel/title_icon.png" alt="">
+            <div class="rest-times">
+                您还有<span id="prize-count">0</span>次免费抽奖机会
+            </div>
+        </div>
+
+        <div class="wheelSurf">
+            <div class="wheel">
+                <div class="wheel-icon">
+                    <img src="../images/wheel/wheel_back.png" alt="">
+                </div>
+                <div class="prize-box">
+                    <div class="prize-content">
+                        <div class="prize-list" id="prize-list"></div>
+                        <div class="prize-reward" id="prize-reward"></div>
+                    </div>
+                    <div class="prize-button" id="prize-button">
+                        <img src="../images/wheel/start_button.png" alt="">
+                    </div>
+                </div>
+                <div class="score">
+                    <div class="spend_score">
+                        <span class="consume-score">0</span>积分/次
+                    </div>
+                    <div class="my_score">
+                        我的积分:<span id="my-score">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="activity_rule">
+                <div class="rule_title">活动规则</div>
+                <div class="rule_list" id="activity-rule"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="mask" id="mask">
+        <div class="prize-result" id="prize-result">
+            <div class="result-title">中奖啦!</div>
+            <div class="result-icon">
+                <img src="" id="result-icon" alt="">
+            </div>
+            <div class="result-desc">
+                <div class="result-reward">
+                    恭喜您抽中<span id="result-reward"></span>
+                </div>
+                <div>需要填写您的收货地址</div>
+            </div>
+            <div class="result-button" id="go-write" data-id="">去填写</div>
+            <div class="close-mask" id="close-prize">
+                <img src="../images/wheel/close_mask.png" alt="">
+            </div>
+        </div>
+
+        <div class="prize-result" id="prize-score">
+            <div class="result-title">中奖啦!</div>
+            <div class="result-icon">
+                <img src="" id="result-img" alt="">
+            </div>
+            <div class="result-desc">
+                <div class="result-reward">
+                    恭喜您抽中<span id="result-score"></span>
+                </div>
+            </div>
+            <div class="result-button result-score-button" id="go-watch">看视频翻倍奖励</div>
+            <div class="close-mask" id="close-score">
+                <img src="../images/wheel/close_mask.png" alt="">
+            </div>
+        </div>
+
+        <div class="prize-result" id="prize-no">
+            <div class="result-title">很遗憾</div>
+            <div class="result-icon">
+                <img src="../images/wheel/lose_lottery.png" alt="">
+            </div>
+            <div class="result-desc">
+                <div class="result-reward">和奖品只差一丢丢</div>
+            </div>
+            <div class="result-button result-score-button" id="go-try">再试试</div>
+            <div class="close-mask" id="close-no">
+                <img src="../images/wheel/close_mask.png" alt="">
+            </div>
+        </div>
+
+        <div class="watch-prize" id="watch-prize">
+            <div class="watch-gift">
+                <img src="../images/wheel/watch_gift.png" alt="">
+            </div>
+            <div class="watch-tips">温馨提示</div>
+            <div class="watch-content">
+                看视频可进行<span id="watch-lottery">0</span>次免费抽奖
+            </div>
+            <div class="watch-button" id="lottery-watch">看视频抽奖</div>
+            <div class="watch-button score-button" id="lottery-score">
+                <span class="consume-score"></span>积分抽奖
+            </div>
+            <div class="close-mask" id="close-watch">
+                <img src="../images/wheel/close_mask.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="mask-tips" id="score-tips">您的积分不足</div>
+
+</body>
+</html>
